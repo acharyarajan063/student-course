@@ -29,11 +29,11 @@
 
 <nav>
 <ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">Courses</a></li>
-<li><a href="#">Contact</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Login</a></li>
+<li><a href="index.php">Home</a></li>
+<li><a href="#courses">Courses</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#register">Register</a></li>
 <li><a href="Admin/login.php">Admin</a></li>
 </ul>
 </nav>
@@ -41,7 +41,7 @@
 </div>
 
 
-<div class="information">
+<div class="information" id="about">
 
 <h2>University of Computer Science</h2>
 
@@ -99,7 +99,7 @@ $result = $conn->query($sql);
 
 <main>
 
-<div class="course-grid">
+<div class="course-grid" id="courses">
 
 <?php if ($result && $result->num_rows > 0): ?>
     <?php while ($row = $result->fetch_assoc()): ?>
@@ -148,7 +148,7 @@ while ($r = $res->fetch_assoc()) {
 ?>
 
 <section class="register-section" style="padding:40px 20px; background:#fff;">
-    <div class="container">
+    <div class="container" id="register">
         <h2>Register Your Interest</h2>
         <?php if ($message): ?>
             <p><?php echo htmlspecialchars($message); ?></p>
@@ -169,7 +169,7 @@ while ($r = $res->fetch_assoc()) {
     </div>
 </section>
 
-<footer class="footer">
+<footer class="footer" id="contact">
 
 <div class="footer-container">
 
@@ -187,10 +187,10 @@ while ($r = $res->fetch_assoc()) {
 <h3>Quick Links</h3>
 
 <ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">Courses</a></li>
+<li><a href="index.php">Home</a></li>
+<li><a href="#courses">Courses</a></li>
 <li><a href="#">Programmes</a></li>
-<li><a href="#">Register</a></li>
+<li><a href="#register">Register</a></li>
 </ul>
 
 </div>
